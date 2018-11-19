@@ -63,7 +63,7 @@ class Game {
             const user = await new RegistrationPage(this.dispatcher).run();
             const result = await new GamePage(this.dispatcher, user, this.config, this.level).run();
             Storage.save(result.name, result.email, result.score);
-            // await new ResultPage(this.dispatcher, result).run();
+            await new ResultPage(this.dispatcher, result).run();
         }
     }
 }
