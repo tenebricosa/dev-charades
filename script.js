@@ -7,12 +7,13 @@ function shuffle(a) {
 }
 
 class Storage {
-    static save(name, email, score) {
+    static save(name, email, score, answers) {
         const data = Storage.select();
         data[name] = {
             name,
             email,
-            score
+            score,
+            answers
         }
 
         localStorage.setItem("data", JSON.stringify(data));
@@ -50,7 +51,6 @@ class Dispatcher {
 class Game {
     constructor(config, levels) {
         this.config = config;
-        this.level = shuffle(levels[config.level]);
         this.dispatcher = new Dispatcher();
     }
 
@@ -60,9 +60,10 @@ class Game {
 
     async run() {
         while (true) {
+            this.level = shuffle(levels[config.level]);
             const user = await new RegistrationPage(this.dispatcher).run();
             const result = await new GamePage(this.dispatcher, user, this.config, this.level).run();
-            Storage.save(result.name, result.email, result.score);
+            Storage.save(result.name, result.email, result.score, result.answers);
             await new ResultPage(this.dispatcher, result).run();
         }
     }
@@ -109,7 +110,8 @@ class GamePage {
         this.result = {
             name: user.name,
             email: user.email,
-            score: 0
+            score: 0,
+            answers: []
         }
         this.rounds = [...tasks];
         this.currentRoundIndex = 0;
@@ -128,7 +130,9 @@ class GamePage {
         this.dispatcher.deattach("answer");
         this.dispatcher.deattach("replay");
         const round = this.rounds[this.currentRoundIndex];
-        round.rightAnswer === userInput ? this.nextRound(round.factor) : this.end();
+        const isRight = round.rightAnswer === userInput;
+        this.result.answers.push({userInput: userInput, isRight: isRight});
+        isRight ? this.nextRound(round.factor) : this.end();
     }
 
     replay(movie) {
@@ -137,6 +141,7 @@ class GamePage {
 
     renderRound(number) {
         this.clearTask();
+        this.userInput.value = "";
         this.taskContainer.appendChild(this.createTaskTag(this.rounds[number]));
         this.dispatcher.attach("answer", this.answer.bind(this));
         this.dispatcher.attach("replay", this.replay.bind(this));
@@ -191,17 +196,36 @@ class ResultPage {
         this.dispatcher = dispatcher;
         this.result = result;
         this.page = document.querySelector(".gameover");
-        this.resultContainer = document.querySelector(".result");
+        this.scoreContainer = document.querySelector(".score");
+        this.resultContainer = document.querySelector("#result");
+    }
+
+    createAnswerTag(item) {
+        const answerItem = document.createElement("div");
+        answerItem.className = item.isRight ? "isRight" : ""
+        answerItem.textContent = item.userInput;
+
+        return answerItem;
+    }
+
+    clearAnswer() {
+        while (this.resultContainer.firstChild) {
+            this.resultContainer.removeChild(this.resultContainer.firstChild);
+        }
     }
 
     run() {
         this.dispatcher.attach("end", this.end.bind(this));
         this.page.classList.remove("invisible");
-        this.resultContainer.textContent = this.result.score;
+        this.scoreContainer.textContent = this.result.score;
+        this.result.answers.map(item => {
+            this.resultContainer.appendChild(this.createAnswerTag(item));
+        })
         return new Promise(resolve => this.resolver = resolve);
     }
 
     end() {
+        this.clearAnswer();
         this.dispatcher.deattach("end");
         this.page.classList.add("invisible");
         this.resolver();
