@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <title>Dev Chardes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="root">
+        <div class="registration page invisible">
+            <div class="registrationContainer">
+                <form class="form">
+                    <label for="name">Имя и фамилия</label>
+                    <input class="block" type="text" id="name" name="name" />
+                    <label for="email">Email</label>
+                    <input class="block" type="email" id="email" name="email" />
+                    <button class="button" type="button" onclick="game.push('register')">
+                        Поехали
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="game page invisible">
+            <div class="task block">
+            </div>
+            <div id="answer">
+                <label for="userInput">Ответ</label>
+                <input class="block" type="text" id="userInput" name="userInput" />
+                <button class="answer button" type="button" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
+            </form>
+        </div>
+
+        <div class="gameover page invisible">
+            <div class="result block"></div>
+            <button class="button" onclick="game.push('end');">
+                Конец
+            </button>
+        </div>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
