@@ -28,15 +28,14 @@
             <div id="answer">
                 <label for="userInput">Ответ</label>
                 <input type="text" id="userInput" name="userInput" />
+                <button class="replay button" type="button" onclick="game.push('replay', document.querySelector('video'));">Replay</button>
                 <button class="answer button" type="button" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
             </div>
         </div>
 
         <div class="gameover page invisible">
             <div class="result"></div>
-            <button class="button" onclick="game.push('end');">
-                Конец
-            </button>
+            <button class="button" onclick="game.push('end');">Новая игра</button>
         </div>
     </div>
 

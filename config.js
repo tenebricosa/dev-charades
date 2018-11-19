@@ -1,25 +1,25 @@
 const config = {
     level: "movie",
-    time: 500000
+    time: 10000
 }
 
 const levels = {
     "movie": [{
         src: "./mov/test1.mp4",
         category: "test",
-        rightAnswer: "1",
+        rightAnswer: "kus",
         factor: 10,
     },
     {
         src: "./mov/test2.mp4",
         category: "test",
-        rightAnswer: "2",
+        rightAnswer: "meow",
         factor: 20,
     },
     {
         src: "./mov/test3.mp4",
         category: "test",
-        rightAnswer: "3",
+        rightAnswer: "cold",
         factor: 30,
     }]
 }

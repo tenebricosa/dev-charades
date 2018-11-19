@@ -126,14 +126,20 @@ class GamePage {
 
     answer(userInput) {
         this.dispatcher.deattach("answer");
+        this.dispatcher.deattach("replay");
         const round = this.rounds[this.currentRoundIndex];
         round.rightAnswer === userInput ? this.nextRound(round.factor) : this.end();
+    }
+
+    replay(movie) {
+        movie.play();
     }
 
     renderRound(number) {
         this.clearTask();
         this.taskContainer.appendChild(this.createTaskTag(this.rounds[number]));
         this.dispatcher.attach("answer", this.answer.bind(this));
+        this.dispatcher.attach("replay", this.replay.bind(this));
     }
 
     nextRound(factor) {
