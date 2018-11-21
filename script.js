@@ -161,7 +161,7 @@ class GamePage {
         this.dispatcher.deattach("replay");
         const round = this.rounds[this.currentRoundIndex];
         const isRight = round.rightAnswer === userInput;
-        this.result.answers.push({userInput: userInput, isRight: isRight});
+        this.result.answers.push({ userInput: userInput, isRight: isRight });
         isRight ? this.nextRound(round.factor) : this.end();
     }
 
@@ -180,13 +180,11 @@ class GamePage {
     nextRound(factor) {
         this.result.score += factor;
         this.currentRoundIndex++;
-        setTimeout(() => {
-            this.userInput.value = "";
-            if (this.currentRoundIndex === this.rounds.length) {
-                return this.end();
-            }
-            this.renderRound(this.currentRoundIndex);
-        }, 1000)
+        this.userInput.value = "";
+        if (this.currentRoundIndex === this.rounds.length) {
+            return this.end();
+        }
+        this.renderRound(this.currentRoundIndex);
     }
 
     createTaskTag(task) {

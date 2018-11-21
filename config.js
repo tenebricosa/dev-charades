@@ -5,21 +5,33 @@ const config = {
 
 const levels = {
     "movie": [{
-        src: "./mov/test1.mp4",
-        category: "test",
-        rightAnswer: "kus",
+        src: "./mov/35.mp4",
+        category: "it",
+        rightAnswer: "фабрика",
         factor: 10,
     },
     {
-        src: "./mov/test2.mp4",
-        category: "test",
-        rightAnswer: "meow",
+        src: "./mov/46.mp4",
+        category: "it",
+        rightAnswer: "mapping",
         factor: 20,
     },
     {
-        src: "./mov/test3.mp4",
-        category: "test",
-        rightAnswer: "cold",
+        src: "./mov/52.mp4",
+        category: "it",
+        rightAnswer: "event",
         factor: 30,
+    },
+    {
+        src: "./mov/63.mp4",
+        category: "it",
+        rightAnswer: "чистый код",
+        factor: 20,
+    },
+    {
+        src: "./mov/69.mp4",
+        category: "common",
+        rightAnswer: "ретроспектива",
+        factor: 20,
     }]
 }
