@@ -110,7 +110,7 @@ const levels = {
         {
             src: "./mov/18.mp4",
             category: "it",
-            rightAnswer: ["бот", "bot"],
+            rightAnswer: ["бот", "bot", "боты"],
             factor: 10,
         },
         {
@@ -128,7 +128,7 @@ const levels = {
         {
             src: "./mov/21.mp4",
             category: "it",
-            rightAnswer: ["шифрование", "encryption"],
+            rightAnswer: ["шифрование", "encryption", "шифруешь", "шифровать"],
             factor: 10,
         },
         {
@@ -308,7 +308,7 @@ const levels = {
         {
             src: "./mov/51.mp4",
             category: "it",
-            rightAnswer: ["инъекция", "injection"],
+            rightAnswer: ["инъекция", "injection", "иньекция"],
             factor: 10,
         },
         {
@@ -326,7 +326,7 @@ const levels = {
         {
             src: "./mov/54.mp4",
             category: "it",
-            rightAnswer: ["фреймворк", "framework"],
+            rightAnswer: ["фреймворк", "framework", "фреймворки"],
             factor: 20,
         },
         {
