@@ -20,7 +20,7 @@ const levels = {
         {
             src: "./mov/3.mp4",
             category: "back",
-            rightAnswer: ["демон", "daemon"],
+            rightAnswer: ["демон", "daemon", "демоны"],
             factor: 20,
         },
         {
@@ -50,43 +50,43 @@ const levels = {
         {
             src: "./mov/8.mp4",
             category: "it",
-            rightAnswer: ["патч", "patch"],
-            factor: 10,
-        },
-        {
-            src: "./mov/9.mp4",
-            category: "it",
-            rightAnswer: ["песочница", "sandbox"],
-            factor: 10,
-        },
-        {
-            src: "./mov/10.mp4",
-            category: "it",
             rightAnswer: ["wrapper", "обертка", "обёртка"],
             factor: 10,
         },
         {
-            src: "./mov/11.mp4",
+            src: "./mov/9.mp4",
             category: "common",
             rightAnswer: ["рисование", "творчество"],
             factor: 10,
         },
         {
-            src: "./mov/12.mp4",
+            src: "./mov/10.mp4",
             category: "testing",
             rightAnswer: ["диаграмма состояний"],
             factor: 30,
         },
         {
-            src: "./mov/13.mp4",
+            src: "./mov/11.mp4",
             category: "it",
             rightAnswer: ["контейнер", "container"],
             factor: 20,
         },
         {
-            src: "./mov/14.mp4",
+            src: "./mov/12.mp4",
             category: "common",
             rightAnswer: ["лабиринт"],
+            factor: 10,
+        },
+        {
+            src: "./mov/13.mp4",
+            category: "it",
+            rightAnswer: ["патч", "patch"],
+            factor: 10,
+        },
+        {
+            src: "./mov/14.mp4",
+            category: "it",
+            rightAnswer: ["песочница", "sandbox"],
             factor: 10,
         },
         {
@@ -116,7 +116,7 @@ const levels = {
         {
             src: "./mov/19.mp4",
             category: "it",
-            rightAnswer: ["сертификат", "серт"],
+            rightAnswer: ["сертификат", "серт", "серты", "сертификаты"],
             factor: 30,
         },
         {
@@ -133,44 +133,44 @@ const levels = {
         },
         {
             src: "./mov/22.mp4",
-            category: "it",
-            rightAnswer: ["композиция"],
-            factor: 30,
-        },
-        {
-            src: "./mov/23.mp4",
-            category: "devops",
-            rightAnswer: ["логирование", "логгирование"],
-            factor: 20,
-        },
-        {
-            src: "./mov/24.mp4",
             category: "common",
             rightAnswer: ["рабочий стол", "десктоп", "desctop"],
             factor: 10,
         },
         {
-            src: "./mov/25.mp4",
+            src: "./mov/23.mp4",
             category: "it",
             rightAnswer: ["алгоритм"],
             factor: 30,
         },
         {
-            src: "./mov/26.mp4",
+            src: "./mov/24.mp4",
             category: "testing",
-            rightAnswer: ["проверка"],
+            rightAnswer: ["проверка", "с проверкой", "проверкой"],
             factor: 20,
         },
         {
-            src: "./mov/27.mp4",
+            src: "./mov/25.mp4",
             category: "it",
             rightAnswer: ["зависимости", "зависимость", "dependences", "dependence"],
             factor: 20,
         },
         {
+            src: "./mov/26.mp4",
+            category: "devops",
+            rightAnswer: ["установка", "деплой", "deploy", "установили", "задеплоили"],
+            factor: 20,
+        },
+        {
+            src: "./mov/27.mp4",
+            category: "it",
+            rightAnswer: ["композиция"],
+            factor: 30,
+        },
+        {
             src: "./mov/28.mp4",
             category: "devops",
-            rightAnswer: ["установка", "деплой", "deploy"],
+            rightAnswer: ["логирование", "логгирование"],
             factor: 20,
         },
         {
@@ -188,7 +188,7 @@ const levels = {
         {
             src: "./mov/31.mp4",
             category: "common",
-            rightAnswer: ["ограничитель"],
+            rightAnswer: ["ограничитель", "ограничение"],
             factor: 30,
         },
         {
@@ -296,7 +296,7 @@ const levels = {
         {
             src: "./mov/49.mp4",
             category: "common",
-            rightAnswer: ["модератор"],
+            rightAnswer: ["модератор", "модерирует", "модерировать"],
             factor: 10,
         },
         {
@@ -422,7 +422,7 @@ const levels = {
         {
             src: "./mov/70.mp4",
             category: "common",
-            rightAnswer: ["капча", "captcha"],
+            rightAnswer: ["капча", "captcha", "капчей"],
             factor: 20,
         }]
 }
