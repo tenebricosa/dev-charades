@@ -97,3 +97,13 @@ button {
     text-align: center;
     overflow: hidden;
 }
+
+.timerContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 0;
+}
+
+.score {
+    font-weight: 600;
+}

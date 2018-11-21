@@ -69,6 +69,35 @@ class Game {
     }
 }
 
+class Timer {
+    constructor(time, lostCallback) {
+        this.timer = document.querySelector(".timer");
+
+        this.time = time;
+        this.callback = lostCallback;
+        this.interval = 0;
+    }
+
+    start() {
+        clearInterval(this.interval);
+        this.state = this.time;
+        this.interval = setInterval(this.tick.bind(this), 1000);
+    }
+
+    stop() {
+        clearInterval(this.interval);
+    }
+
+    tick() {
+        this.state -= 1000;
+        this.timer.textContent = this.state / 1000;
+        if (this.state <= 0) {
+            this.stop();
+            this.callback();
+        }
+    }
+}
+
 class RegistrationPage {
     constructor(dispatcher) {
         this.dispatcher = dispatcher;
@@ -120,6 +149,7 @@ class GamePage {
         this.taskContainer = document.querySelector(".task");
         this.movie = document.querySelector("#movie");
         this.userInput = document.querySelector("#userInput");
+        this.timer = new Timer(config.time, this.end.bind(this));
     }
 
     initializeView() {
@@ -180,10 +210,12 @@ class GamePage {
     run() {
         this.initializeView();
         this.renderRound(0);
+        this.timer.start();
         return new Promise(resolve => this.resolver = resolve);
     }
 
     end() {
+        this.timer.stop();
         this.clearTask();
         this.page.classList.add("invisible");
         this.resolver(this.result);

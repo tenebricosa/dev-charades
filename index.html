@@ -28,8 +28,9 @@
         </div>
 
         <div class="game page invisible">
-            <div class="task">
-            </div>
+            <div class="timerContainer">Время:&nbsp;<span class="timer"> </span></div>
+                
+            <div class="task"></div>
             <div class="answerForm" id="answer">
                 <form class="form">
                     <input class="input" type="text" id="userInput" name="userInput" placeholder="Ответ" />
@@ -42,9 +43,9 @@
         </div>
 
         <div class="gameover page invisible">
-            <div>Ты набрал <span class="score"></span> очков</div>
+            <div>Ты набрал&nbsp;<span class="score"></span> очков</div>
             <div id="result" class="result"></div>
-            <button class="button" onclick="game.push('end');">Новая игра</button>
+            <button class="button" onclick="game.push('end');">На главную</button>
         </div>
     </div>
 
