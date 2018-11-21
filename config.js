@@ -44,7 +44,7 @@ const levels = {
         {
             src: "./mov/7.mp4",
             category: "it",
-            rightAnswer: ["брутфорс", "brute force", "полный перебор", "метод грубой силы"],
+            rightAnswer: ["брутфорс", "brute force", "полный перебор", "метод грубой силы", "bruteforce"],
             factor: 10,
         },
         {
@@ -80,7 +80,7 @@ const levels = {
         {
             src: "./mov/13.mp4",
             category: "it",
-            rightAnswer: ["контенер", "container"],
+            rightAnswer: ["контейнер", "container"],
             factor: 20,
         },
         {
@@ -104,19 +104,19 @@ const levels = {
         {
             src: "./mov/17.mp4",
             category: "common",
-            rightAnswer: ["торрент"],
+            rightAnswer: ["торрент", "torrent"],
             factor: 10,
         },
         {
             src: "./mov/18.mp4",
             category: "it",
-            rightAnswer: ["бот"],
+            rightAnswer: ["бот", "bot"],
             factor: 10,
         },
         {
             src: "./mov/19.mp4",
             category: "it",
-            rightAnswer: ["сертификат"],
+            rightAnswer: ["сертификат", "серт"],
             factor: 30,
         },
         {
@@ -128,7 +128,7 @@ const levels = {
         {
             src: "./mov/21.mp4",
             category: "it",
-            rightAnswer: ["шифрование"],
+            rightAnswer: ["шифрование", "encryption"],
             factor: 10,
         },
         {
@@ -140,13 +140,13 @@ const levels = {
         {
             src: "./mov/23.mp4",
             category: "devops",
-            rightAnswer: ["логирование"],
+            rightAnswer: ["логирование", "логгирование"],
             factor: 20,
         },
         {
             src: "./mov/24.mp4",
             category: "common",
-            rightAnswer: ["рабочий стол"],
+            rightAnswer: ["рабочий стол", "десктоп", "desctop"],
             factor: 10,
         },
         {
@@ -164,13 +164,13 @@ const levels = {
         {
             src: "./mov/27.mp4",
             category: "it",
-            rightAnswer: ["зависимости"],
+            rightAnswer: ["зависимости", "зависимость", "dependences", "dependence"],
             factor: 20,
         },
         {
             src: "./mov/28.mp4",
             category: "devops",
-            rightAnswer: ["установка", "деплой"],
+            rightAnswer: ["установка", "деплой", "deploy"],
             factor: 20,
         },
         {
@@ -194,19 +194,19 @@ const levels = {
         {
             src: "./mov/32.mp4",
             category: "it",
-            rightAnswer: ["документ"],
+            rightAnswer: ["документ", "document"],
             factor: 20,
         },
         {
             src: "./mov/33.mp4",
             category: "front",
-            rightAnswer: ["модальное окно", "модалка"],
+            rightAnswer: ["модальное окно", "модалка", "modal", "modal window", "modal box"],
             factor: 20,
         },
         {
             src: "./mov/34.mp4",
             category: "it",
-            rightAnswer: ["уязвимость"],
+            rightAnswer: ["уязвимость", "vulnerability"],
             factor: 10,
         },
         {
@@ -218,7 +218,7 @@ const levels = {
         {
             src: "./mov/36.mp4",
             category: "it",
-            rightAnswer: ["компиляция"],
+            rightAnswer: ["компиляция", "compilation"],
             factor: 20,
         },
         {
@@ -230,7 +230,7 @@ const levels = {
         {
             src: "./mov/38.mp4",
             category: "it",
-            rightAnswer: ["метаданные"],
+            rightAnswer: ["метаданные", "мета данные", "мета-данные", "metadata", "meta data", "метадата"],
             factor: 30,
         },
         {
@@ -254,7 +254,7 @@ const levels = {
         {
             src: "./mov/42.mp4",
             category: "devoops",
-            rightAnswer: ["конфигурация"],
+            rightAnswer: ["конфигурация", "configuration"],
             factor: 20,
         },
         {
@@ -266,7 +266,7 @@ const levels = {
         {
             src: "./mov/44.mp4",
             category: "it",
-            rightAnswer: ["solid"],
+            rightAnswer: ["solid", "солид"],
             factor: 20,
         },
         {
@@ -278,7 +278,7 @@ const levels = {
         {
             src: "./mov/46.mp4",
             category: "it",
-            rightAnswer: ["mapping", "конвертация"],
+            rightAnswer: ["mapping", "конвертация", "маппинг"],
             factor: 20,
         },
         {
@@ -338,7 +338,7 @@ const levels = {
         {
             src: "./mov/56.mp4",
             category: "common",
-            rightAnswer: ["монитор", "моник"],
+            rightAnswer: ["монитор", "моник", "monitor"],
             factor: 10,
         },
         {
@@ -368,7 +368,7 @@ const levels = {
         {
             src: "./mov/61.mp4",
             category: "it",
-            rightAnswer: ["репозиторий"],
+            rightAnswer: ["репозиторий", "репа", "repository"],
             factor: 20,
         },
         {
@@ -398,13 +398,13 @@ const levels = {
         {
             src: "./mov/66.mp4",
             category: "devops",
-            rightAnswer: ["метрики"],
+            rightAnswer: ["метрики", "metrics"],
             factor: 20,
         },
         {
             src: "./mov/67.mp4",
             category: "devops",
-            rightAnswer: ["proxy", "прокси"],
+            rightAnswer: ["proxy", "прокси", "прокся"],
             factor: 10,
         },
         {
