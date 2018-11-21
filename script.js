@@ -160,9 +160,11 @@ class GamePage {
         this.dispatcher.deattach("answer");
         this.dispatcher.deattach("replay");
         const round = this.rounds[this.currentRoundIndex];
-        const isRight = round.rightAnswer === userInput;
-        this.result.answers.push({ userInput: userInput, isRight: isRight });
-        isRight ? this.nextRound(round.factor) : this.end();
+        const isRight = round.rightAnswer.some(el => el === userInput.toLowerCase());
+        this.result.answers.push({ userInput: userInput ? userInput : "Нет ответа", isRight: isRight });
+        const score = isRight ? round.factor : 0;
+        this.nextRound(score);
+        //isRight ? this.nextRound(round.factor) : this.end();
     }
 
     replay(movie) {
@@ -192,7 +194,7 @@ class GamePage {
             const movie = document.createElement("video");
             movie.src = task.src;
             movie.width = 640;
-            movie.height = 480;
+            movie.height = 360;
             movie.autoplay = true;
 
             return movie;
