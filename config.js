@@ -1,6 +1,6 @@
 const config = {
     level: "movie",
-    time: 100000
+    time: 180000
 }
 
 const levels = {

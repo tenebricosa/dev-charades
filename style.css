@@ -36,7 +36,8 @@ button {
 }
 
 .button:hover {
-    top: -3px;
+    background: #000;
+    color: #fff;
 }
 
 .button:focus {
@@ -48,7 +49,7 @@ button {
 }
 
 .page {
-    margin-top: 5em;
+    margin-top: 5vh;
 }
 
 .registrationContainer {
