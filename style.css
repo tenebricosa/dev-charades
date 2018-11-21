@@ -1,3 +1,99 @@
+:root {
+    --font-family-default: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-accent: 'Neucha', cursive;
+    --accent-color: #d94440;
+}
+
+html {
+    font-family: var(--font-family-default);
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonWrapper {
+    text-align: center;
+}
+
+button {
+    font-family: var(--font-family-accent);
+    font-size: 1.6em;
+    padding: 0.3em 1em 0.2em;
+    border: 3px solid #000;
+    border-radius: 10px;
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.button:hover {
+    top: -3px;
+}
+
+.button:focus {
+    outline: none;
+}
+
 .invisible {
     display: none;
+}
+
+.page {
+    margin-top: 5em;
+}
+
+.registrationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.input {
+    display: block;
+    width: 300px;
+    padding: 0.8em;
+    font-size: 1em;
+    margin: 0 auto 1.5em;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: var(--font-family-accent);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    font-family: var(--font-family-accent);
+}
+
+.answerForm {
+    display: flex;
+    justify-content: center;
+}
+
+.task {
+    margin-bottom: 1.5em;
+}
+
+.result {
+    margin: 1.5em 0;
+    max-width: 600px;
+}
+
+.isRight {
+    color: #3F9726;
+}
+
+.isWrong {
+    color: var(--accent-color);
+}
+
+.gameover {
+    text-align: center;
+    overflow: hidden;
 }

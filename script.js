@@ -163,8 +163,8 @@ class GamePage {
         if (task.src) {
             const movie = document.createElement("video");
             movie.src = task.src;
-            movie.width = 320;
-            movie.height = 240;
+            movie.width = 640;
+            movie.height = 480;
             movie.autoplay = true;
 
             return movie;
@@ -202,7 +202,7 @@ class ResultPage {
 
     createAnswerTag(item) {
         const answerItem = document.createElement("div");
-        answerItem.className = item.isRight ? "isRight" : ""
+        answerItem.className = item.isRight ? "isRight" : "isWrong"
         answerItem.textContent = item.userInput;
 
         return answerItem;

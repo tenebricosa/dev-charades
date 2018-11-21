@@ -2,22 +2,27 @@
 <html lang="ru">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dev Chardes</title>
+    <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="root">
         <div class="registration page invisible">
+            <img src="./img/logo.png" alt="Устами разработчиков" width="600">
             <div class="registrationContainer">
                 <form class="form">
-                    <label for="name">Имя и фамилия</label>
-                    <input type="text" id="name" name="name" />
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" />
-                    <button class="button" type="button" onclick="game.push('register')">
-                        Поехали
-                    </button>
+                    <input class="input" type="text" id="name" name="name" placeholder="Имя и фамилия" />
+                    <input class="input" type="email" id="email" name="email" placeholder="Электронная почта" />
+                    <div class="buttonWrapper">
+                        <button class="button" type="button" onclick="game.push('register')">
+                            Поехали
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -25,17 +30,20 @@
         <div class="game page invisible">
             <div class="task">
             </div>
-            <div id="answer">
-                <label for="userInput">Ответ</label>
-                <input type="text" id="userInput" name="userInput" />
-                <button class="replay button" type="button" onclick="game.push('replay', document.querySelector('video'));">Replay</button>
-                <button class="answer button" type="button" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
+            <div class="answerForm" id="answer">
+                <form class="form">
+                    <input class="input" type="text" id="userInput" name="userInput" placeholder="Ответ" />
+
+                    <button class="replay button" type="button" onclick="game.push('replay', document.querySelector('video'));">Ещё
+                        раз</button>
+                    <button class="answer button" type="button" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
+                </form>
             </div>
         </div>
 
         <div class="gameover page invisible">
-            <div class="score"></div>
-            <div id="result"></div>
+            <div>Ты набрал <span class="score"></span> очков</div>
+            <div id="result" class="result"></div>
             <button class="button" onclick="game.push('end');">Новая игра</button>
         </div>
     </div>
