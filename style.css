@@ -113,3 +113,20 @@ button {
 .score {
     font-weight: 600;
 }
+
+.leaderboardHeadCol {
+    font-family: var(--font-family-accent);
+    padding-bottom: 1em;
+    padding-right: 2em;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.leaderboardCol {
+    padding-bottom: 1em;
+    border-right: 2em solid #fff;
+    text-align: left;
+    font-family: var(--font-family-default);
+    max-width: 300px;
+    overflow: hidden;
+}

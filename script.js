@@ -16,7 +16,7 @@ class Storage {
             answers
         }
 
-        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem("devCharades", JSON.stringify(data));
     }
 
     static get(name) {

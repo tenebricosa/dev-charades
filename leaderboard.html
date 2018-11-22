@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Chardes</title>
+    <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="root">
+        <div class="page">
+            <table class="leaderboard">
+                <thead class="leaderboardHead">
+                    <tr>
+                        <th class="leaderboardHeadCol">#</th>
+                        <th class="leaderboardHeadCol">Имя</th>
+                        <th class="leaderboardHeadCol">Почта</th>
+                        <th class="leaderboardHeadCol">Счёт</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./config.js"></script>
+
+    <script>
+        const zvezdify = (email) => {
+            return email.split("@")[0] + "@***";
+        };
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".tbody");
+            const raw = localStorage.getItem("devCharades");
+            const playerScores = raw ? JSON.parse(raw) : {};
+            const scores = [];
+            Object.keys(playerScores).forEach(x => scores.push(playerScores[x]));
+            scores.sort((a, b) => b.score - a.score);
+            scores.forEach((x, i) => {
+                const first = document.createElement("td");
+                first.textContent = (i + 1).toString();
+                first.className = "leaderboardCol";
+                const second = document.createElement("td");
+                second.textContent = x.name;
+                second.className = "leaderboardCol";
+                const third = document.createElement("td");
+                third.textContent = zvezdify(x.email);
+                third.className = "leaderboardCol";
+                const fouth = document.createElement("td");
+                fouth.textContent = x.score;
+                fouth.className = "leaderboardCol";
+                const tr = document.createElement("tr");
+                tr.classList.add("row");
+                tr.appendChild(first);
+                tr.appendChild(second);
+                tr.appendChild(third);
+                tr.appendChild(fouth);
+                container.appendChild(tr);
+            })
+        });
+    </script>
+</body>
+
+</html>
