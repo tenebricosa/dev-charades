@@ -1,6 +1,6 @@
 const config = {
     level: "movie",
-    time: 180000
+    time: 2000
 }
 
 const levels = {
@@ -32,7 +32,7 @@ const levels = {
         {
             src: "./mov/5.mp4",
             category: "common",
-            rightAnswer: ["касание"],
+            rightAnswer: ["касание", "точка касания"],
             factor: 20,
         },
         {
@@ -158,7 +158,7 @@ const levels = {
         {
             src: "./mov/26.mp4",
             category: "devops",
-            rightAnswer: ["установка", "деплой", "deploy", "установили", "задеплоили"],
+            rightAnswer: ["установка", "деплой", "deploy", "установили", "задеплоили", "релиз", "зарелизили", "release"],
             factor: 20,
         },
         {

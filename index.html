@@ -16,10 +16,10 @@
             <img src="./img/logo.png" alt="Устами разработчиков" width="600">
             <div class="registrationContainer">
                 <form class="form">
-                    <input autocomplete="off" class="input" type="text" id="name" name="name" placeholder="Имя и фамилия" />
+                    <input autocomplete="off" class="input" type="text" id="name" name="name" placeholder="Имя и фамилия" autofocus />
                     <input autocomplete="off" class="input" type="email" id="email" name="email" placeholder="Электронная почта" />
                     <div class="buttonWrapper">
-                        <button class="button" type="button" onclick="game.push('register')">
+                        <button class="button" type="submit" onclick="game.push('register')">
                             Поехали
                         </button>
                     </div>
@@ -32,13 +32,13 @@
 
             <div class="task"></div>
             <div class="answerForm" id="answer">
-                <div class="form">
-                    <input class="input" autocomplete="off" type="text" id="userInput" name="userInput" placeholder="Ответ" />
+                <form class="form">
+                    <input class="input" autocomplete="off" type="text" id="userInput" name="userInput" placeholder="Ответ" autofocus />
 
                     <button class="replay button" type="button" onclick="game.push('replay', document.querySelector('video'));">Ещё
                         раз</button>
-                    <button class="answer button" type="button" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
-                </div>
+                    <button class="answer button" type="submit" onclick="game.push('answer', document.getElementById('userInput').value)">Дальше</button>
+                </form>
             </div>
         </div>
 
