@@ -25,7 +25,7 @@ class Storage {
     }
 
     static select() {
-        const data = localStorage.getItem("data")
+        const data = localStorage.getItem("devCharades")
         return data ? JSON.parse(data) : {};
     }
 }
